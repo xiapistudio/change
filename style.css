@@ -87,9 +87,9 @@ blockquote {color: #999;background: #f9f9f9;padding: 12px 12px 5px 12px;margin:5
 /* Posts */
 #content a{ border-bottom:1px dotted #999;}
 #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 { color:#666; font-weight:bold; padding:8px 0;}
-#content h2 {margin: 10px 0 10px -25px;border-left:5px solid #888; padding:0 5px 0 20px; background:#fafafa;line-height:35px;}
-#content h1 { font-size:18px; line-height:24px;}
-#content h2, #content h3 { font-size:16px; line-height:20px;}
+#content h2 {margin: 10px 0 10px -25px;border-left:5px solid #888; padding:0 5px 0 20px; background:#fafafa;}
+#content h1 { font-size:18px; line-height:30px;}
+#content h2, #content h3 { font-size:16px; line-height:28px;}
 #content h4, #content h5 { font-size:14px; line-height:16px;}
 #content h6 { font-size:12px; line-height:14px;}
 #content ol { list-style:decimal inside; margin:10px}

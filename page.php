@@ -16,7 +16,7 @@
 <div id="container-inner" class="clear">
 	<div id="primary">
 	<h1 class="sub"><?php the_title(); ?></h1>
-	<div class="content">
+	<div id="content">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div <?php if(function_exists('post_class')) : ?><?php post_class(); ?><?php else : ?>class="post post-<?php the_ID(); ?>"<?php endif; ?>>
 	<?php the_content('<br />[ More .......................................................... ]'); ?>

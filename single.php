@@ -4,7 +4,7 @@
 	Theme Name: 	Change Theme
 	Theme URI: 		https://github.com/xiapistudio/change
 	Description: 	Chage主题，虾皮工作室专用
-	Version: 		1.0.0
+	Version: 		1.0.1
 	Author: 		虾皮工作室
 	Author URI: 	http://www.xiapistudio.com/
 	License:     	GNU General Public License v3.0
@@ -22,6 +22,7 @@
 				<span><i class="fa fa-folder-open">&nbsp;</i><?php the_category(' ',''); ?></span>
 				<span><i class="fa fa-user">&nbsp;</i><?php the_author_posts_link();?></span>
 				<span><i class="fa fa-calendar">&nbsp;</i><?php echo fun_timeago( get_gmt_from_date(get_the_time('Y-m-d G:i:s'))); ?></span>
+				<?php if( function_exists( 'the_views' ) ) { ?><span><i class="fa fa-fire"></i>&nbsp;阅读 <?php the_views(); }?> 次</span>
 				<?php if (is_user_logged_in()) : ?>
 				<span><i class="fa fa-edit">&nbsp;</i><?php edit_post_link('编辑', '', ''); ?></span>
 				<?php endif; ?>
