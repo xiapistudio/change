@@ -29,7 +29,7 @@ h2.sub,h3.sub {margin:0 0 15px;padding:0 0 8px;font-size:16px;font-weight: norma
 
 .article,.pagenavi a,.list ul li a,.spy li,.spy li a,#menu .menunav li a,#menu .menunav li,#logo h1 a,#searchform #s,#searchform #searchsubmit,#commentform #submit,ol.commentlist li div.reply a,#commentform textarea,#commentform input,.next-prev a,#floater a,.s-list ul li a{-webkit-transition:all 150ms ease-in-out;-o-transition:all 150ms ease-in-out; -moz-transition: all 150ms ease-in-out;-ms-transition: all 150ms ease-in-out;}
 .article,#commentform input,#commentform textarea,#commentform #submit,.postmetadata,.next-prev a,.postmetadata a,.postinfo a,.new,.pagenavi a,.page-numbers,.pagenavi .current,.list ul li a:hover,.spy li:hover,.list li img,.list li .nothumbnail,.footbar a:hover {-moz-border-radius: 2px;-khtml-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px;}
-blockquote {color: #999;background: #f9f9f9;padding: 12px 12px 5px 12px;margin:5px 0px 15px 20px;border-left: 3px solid #E8E8E8;}
+blockquote {color: #999;background: #f9f9f9;padding: 12px 12px 5px 12px;margin:5px 0px 15px 30px;border-left: 3px solid #E8E8E8;}
 ::-moz-selection,::selection {color:#000;background:#fc0;}
 
 /* Head */
@@ -94,7 +94,8 @@ blockquote {color: #999;background: #f9f9f9;padding: 12px 12px 5px 12px;margin:5
 #content h6 { font-size:12px; line-height:14px;}
 #content ol { list-style:decimal inside; margin:10px}
 #content ul { list-style:circle inside; margin:10px}
-#content p{margin:15px 0; font-size:14px; line-height:180%;word-break:break-all; word-wrap:break-word;}
+#content p {margin:15px 0; font-size:14px; text-indent:2em; line-height:180%; word-break:break-all; word-wrap:break-word;}
+#content blockquote p {text-indent:0em;}
 #content img{max-width:650px;}
 #content strong{color:#222}
 #content img.alignleft{ margin-right:20px; margin-top:5px;}
@@ -143,7 +144,6 @@ blockquote {color: #999;background: #f9f9f9;padding: 12px 12px 5px 12px;margin:5
 .s-list {margin:0 0 30px;}
 .s-list ul{list-style:inside;font-size:12px;}
 .s-list ul li{border-bottom:1px dotted #e5e5e5; color:#bbb;}
-.s-list ul li:hover{background:#eee;}
 .s-list ul li a{color:#777;padding:4px 0; display:inline-block}
 .s-list ul li a:hover{color:#000;padding-left:12px;}
 .s-list ul li a span{color:#bbb;}
@@ -291,9 +291,9 @@ a.nivo-prevNav{left:15px;}
 #rand a:hover{background-position: 0 -210px;}
 
 /* Navigation */
-.navigation {font-size: 14px;font-weight: bold; overflow: hidden; text-align: center; padding: 0 20px 20px; margin:10px 0px 20px;background:#fbfbfb;}
-.navigation .navigation-left {float: left; text-align: left; position: relative; padding-left: 40px; width: 25%;}
-.navigation .navigation-right {float: right; text-align: right; position: relative; padding-right: 40px; width: 25%;}
+.navigation {font-weight: bold; overflow: hidden; text-align: center; padding: 0 20px 20px; margin:10px 0px 20px;background:#fbfbfb;}
+.navigation .navigation-left {float: left; text-align: left; position: relative; padding-left: 40px; width: 40%;}
+.navigation .navigation-right {float: right; text-align: right; position: relative; padding-right: 40px; width: 40%;}
 .navigation span {display: block; color: #aab2bd; margin-top: 20px; font-size: 12px;}
 .navigation a {font-weight: normal;}
 .navigation a:hover {text-decoration: underline;}
@@ -334,3 +334,38 @@ a.nivo-prevNav{left:15px;}
 	width: 260px;
 	position:fixed;
 }
+
+/** 文章目录 **/
+#article-index {
+    -moz-border-radius: 6px 6px 6px 6px;
+    border: 1px solid #DEDFE1;
+    float: right;
+    margin: 0 0 15px 15px;
+    padding: 0 6px;
+    width: 180px;
+    line-height: 23px;
+    font-size: 12px;
+    background-color: #fafafa;
+}
+#article-index strong {
+    border-bottom: 1px dashed #DDDDDD;
+    display: block;
+    line-height: 30px;
+    padding: 0 4px;
+}
+#index-ul {
+    margin: 0;
+    padding-bottom: 10px;
+}
+#index-ul li {
+    background: none repeat scroll 0 0 transparent;
+    list-style-type: disc;
+    padding: 0;
+    margin-left: 2px;
+}
+
+/** 文章分类 **/
+.s-list ul.children {margin-left:20px}
+.s-list ul li.cat-item {border-bottom:0px}
+
+

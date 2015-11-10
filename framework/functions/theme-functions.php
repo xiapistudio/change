@@ -435,4 +435,30 @@ if (!function_exists('mb_strimwidth')) {
 	}
 }
 
+/**
+ * 
+ * 文章目录
+ * @param string $content
+ */
+function fun_article_index($content) {
+   $matches = array();
+   $ul_li = '';
 
+   $pattern = "/<h2>([^<]+)<\/h2>/im";
+
+   if(is_singular() && preg_match_all($pattern, $content, $matches)) {
+      foreach($matches[1] as $num => $title) {
+         $title = trim(strip_tags($title));
+         $content = str_replace($matches[0][$num], '<h2 id="title-'.$num.'">'.$title.'</h2>', $content);
+         $ul_li .= '<li><a href="#title-'.$num.'" title="'.$title.'">'.$title."</a></li>\n";
+      }
+
+      $content = "\n<div id=\"article-index\">
+                     <strong>文章目录</strong>
+                     <ul id=\"index-ul\">\n" . $ul_li . "</ul>
+                  </div>\n" . $content;
+   }
+
+   return $content;
+}
+add_filter('the_content','fun_article_index');
