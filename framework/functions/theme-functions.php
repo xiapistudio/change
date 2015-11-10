@@ -4,7 +4,7 @@
 	Theme Name: 	Change Theme
 	Theme URI: 		https://github.com/xiapistudio/change
 	Description: 	Chage主题，虾皮工作室专用
-	Version: 		1.0.0
+	Version: 		1.0.1
 	Author: 		虾皮工作室
 	Author URI: 	http://www.xiapistudio.com/
 	License:     	GNU General Public License v3.0
